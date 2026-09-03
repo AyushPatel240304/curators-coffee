@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-ink text-cream font-body antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    @apply bg-copper text-ink;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  /* Layered cinematic vignette so text stays legible over photography */
+  .cine-vignette::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      120% 90% at 50% 40%,
+      transparent 30%,
+      rgba(11, 10, 9, 0.55) 78%,
+      rgba(11, 10, 9, 0.9) 100%
+    );
+    pointer-events: none;
+  }
+  .cine-scrim::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(11, 10, 9, 0.35) 0%,
+      transparent 35%,
+      transparent 60%,
+      rgba(11, 10, 9, 0.7) 100%
+    );
+    pointer-events: none;
+  }
+}
+
+/* Lenis smooth-scroll baseline */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Respect reduced motion: disable transforms/steam, keep content visible */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
