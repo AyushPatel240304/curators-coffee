@@ -1,6 +1,10 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 export interface CineSceneRefs {
   /** The pinned full-viewport wrapper */
   section: HTMLElement;
