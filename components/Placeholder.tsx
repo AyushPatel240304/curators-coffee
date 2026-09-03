@@ -2,24 +2,34 @@ import { forwardRef } from "react";
 
 interface PlaceholderProps {
   gradient: string;
+  image?: string;
+  alt?: string;
   label?: string;
   className?: string;
   grain?: boolean;
 }
 
 /**
- * Tasteful stand-in for real photography: a warm gradient plate with an
- * optional grain overlay and a faint caption noting where the shot goes.
- * Swap these for <Image> / frame sequences in production.
+ * Warm gradient plate (used as the image's loading backdrop) with an
+ * optional photo layered on top and a grain overlay for texture.
  */
 export const Placeholder = forwardRef<HTMLDivElement, PlaceholderProps>(
-  ({ gradient, label, className = "", grain = true }, ref) => {
+  ({ gradient, image, alt, label, className = "", grain = true }, ref) => {
     return (
       <div
         ref={ref}
         className={`relative h-full w-full overflow-hidden ${className}`}
         style={{ background: gradient }}
       >
+        {image && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={image}
+            alt={alt ?? ""}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        )}
         {grain && (
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.08] mix-blend-overlay"

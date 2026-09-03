@@ -45,7 +45,8 @@ export function About() {
         >
           <Placeholder
             gradient="linear-gradient(160deg,#3A2A1E,#5B4029 60%,#241812)"
-            label="Founder / roastery portrait"
+            image="https://images.pexels.com/photos/6205635/pexels-photo-6205635.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Founder in the roastery"
             grain
           />
         </div>

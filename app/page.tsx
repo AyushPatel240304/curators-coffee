@@ -13,6 +13,7 @@ import { Gallery } from "@/components/Gallery";
 import { About } from "@/components/About";
 import { Testimonials } from "@/components/Testimonials";
 import { Visit } from "@/components/Visit";
+import { Reservation } from "@/components/Reservation";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -35,6 +36,7 @@ export default function Home() {
         <About />
         <Testimonials />
         <Visit />
+        <Reservation />
       </main>
       <Footer />
     </>

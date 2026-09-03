@@ -61,7 +61,7 @@ export function Footer() {
             © {new Date().getFullYear()} Curators Coffee. All rights reserved.
           </span>
           <span className="font-mono text-xs text-cream/30">
-            Crafted as a demo · placeholder imagery
+            Crafted as a demo · photography via Pexels
           </span>
         </div>
       </div>

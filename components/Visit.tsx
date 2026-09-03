@@ -94,7 +94,7 @@ export function Visit() {
               Get Directions
             </a>
             <a
-              href="#"
+              href="#reserve"
               className="rounded-full border border-coffee/30 px-7 py-3 font-body text-sm text-coffee transition-all duration-300 ease-glide hover:border-coffee hover:bg-coffee hover:text-cream"
             >
               Reserve a Table

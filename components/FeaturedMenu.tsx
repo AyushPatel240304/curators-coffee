@@ -39,7 +39,13 @@ export function FeaturedMenu() {
                 className="aspect-[4/5] w-full overflow-hidden"
                 style={{ background: item.gradient }}
               >
-                <div className="h-full w-full scale-105 transition-transform duration-700 ease-glide group-hover:scale-110" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  loading="lazy"
+                  className="h-full w-full scale-105 object-cover transition-transform duration-700 ease-glide group-hover:scale-110"
+                />
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <div className="flex items-baseline justify-between gap-3">

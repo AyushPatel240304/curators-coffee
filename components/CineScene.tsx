@@ -49,11 +49,11 @@ export function CineScene({
     >
       {/* Media layer (scales + pans) */}
       <div ref={media} className="absolute inset-0" style={{ willChange: "transform" }}>
-        <Placeholder
-          gradient={scene.gradient}
-          label={`Scene ${scene.index} · ${scene.id} · replace with photography`}
-        />
+        <Placeholder gradient={scene.gradient} image={scene.image} alt={scene.headline} />
       </div>
+
+      {/* Flat scrim so copy stays legible over bright photography */}
+      <div className="absolute inset-0 bg-ink/35" />
 
       {ambient}
 

@@ -61,7 +61,13 @@ export function Gallery() {
               style={{ background: tile.gradient }}
               aria-label={`Open gallery image ${i + 1}`}
             >
-              <span className="absolute inset-0 scale-100 transition-transform duration-700 ease-glide group-hover:scale-110" style={{ background: tile.gradient }} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={tile.image}
+                alt=""
+                loading="lazy"
+                className="absolute inset-0 h-full w-full scale-100 object-cover transition-transform duration-700 ease-glide group-hover:scale-110"
+              />
               <span className="absolute inset-0 bg-ink/0 transition-colors duration-500 group-hover:bg-ink/10" />
             </button>
           ))}
@@ -81,6 +87,12 @@ export function Gallery() {
             className="relative aspect-[3/2] w-full max-w-4xl overflow-hidden rounded-2xl ring-1 ring-cream/10"
             style={{ background: galleryTiles[active].gradient }}
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={galleryTiles[active].image}
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover"
+            />
             <button
               onClick={close}
               className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-ink/50 text-cream/80 transition hover:bg-ink hover:text-cream"

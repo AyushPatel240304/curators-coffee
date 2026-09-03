@@ -11,6 +11,8 @@ export interface Scene {
   description: string;
   /** placeholder gradient stand-in for the eventual photography */
   gradient: string;
+  /** HD photo related to the scene's description */
+  image: string;
   scrollRange: string;
 }
 
@@ -24,6 +26,8 @@ export const scenes: Scene[] = [
       "Every exceptional cup starts long before it's brewed. It begins with a carefully selected bean.",
     gradient:
       "radial-gradient(90% 90% at 50% 45%, #2A1E15 0%, #140E0A 55%, #0B0A09 100%)",
+    image:
+      "https://images.pexels.com/photos/1399094/pexels-photo-1399094.jpeg?auto=compress&cs=tinysrgb&w=1920",
     scrollRange: "0–15%",
   },
   {
@@ -35,6 +39,8 @@ export const scenes: Scene[] = [
       "Heat unlocks the aroma, depth and character hidden inside every bean.",
     gradient:
       "radial-gradient(80% 80% at 50% 60%, #7A2E10 0%, #3A1608 45%, #140A06 100%)",
+    image:
+      "https://images.pexels.com/photos/4264047/pexels-photo-4264047.jpeg?auto=compress&cs=tinysrgb&w=1920",
     scrollRange: "15–30%",
   },
   {
@@ -46,6 +52,8 @@ export const scenes: Scene[] = [
       "Consistency matters. Every grind is tuned for balance and flavour.",
     gradient:
       "radial-gradient(85% 85% at 50% 50%, #3E2C1E 0%, #23180F 55%, #0E0A07 100%)",
+    image:
+      "https://images.pexels.com/photos/16627279/pexels-photo-16627279.jpeg?auto=compress&cs=tinysrgb&w=1920",
     scrollRange: "30–45%",
   },
   {
@@ -57,6 +65,8 @@ export const scenes: Scene[] = [
       "Pressure, temperature and timing come together to create a perfectly balanced espresso.",
     gradient:
       "radial-gradient(80% 90% at 50% 55%, #4A3320 0%, #2A1B10 50%, #100A06 100%)",
+    image:
+      "https://images.pexels.com/photos/32103303/pexels-photo-32103303.jpeg?auto=compress&cs=tinysrgb&w=1920",
     scrollRange: "45–60%",
   },
   {
@@ -68,6 +78,8 @@ export const scenes: Scene[] = [
       "Crafted with intention and served with care, every cup reflects our passion for exceptional coffee.",
     gradient:
       "radial-gradient(75% 80% at 50% 48%, #5B4227 0%, #33241528 40%, #0D0A07 100%), radial-gradient(60% 60% at 50% 45%, #2E2116 0%, #0B0A09 100%)",
+    image:
+      "https://images.pexels.com/photos/12703064/pexels-photo-12703064.jpeg?auto=compress&cs=tinysrgb&w=1920",
     scrollRange: "60–75%",
   },
   {
@@ -79,6 +91,8 @@ export const scenes: Scene[] = [
       "Whether you're meeting friends, working quietly, or enjoying a slow morning, Curators Coffee is designed for meaningful moments.",
     gradient:
       "linear-gradient(180deg, #1D1610 0%, #2A201642 40%, #0B0A09 100%), radial-gradient(70% 60% at 60% 40%, #6B5334 0%, transparent 60%)",
+    image:
+      "https://images.pexels.com/photos/4874896/pexels-photo-4874896.jpeg?auto=compress&cs=tinysrgb&w=1920",
     scrollRange: "75–100%",
   },
 ];
@@ -88,6 +102,7 @@ export interface MenuItem {
   price: string;
   note: string;
   gradient: string;
+  image: string;
 }
 
 export const menu: MenuItem[] = [
@@ -96,24 +111,32 @@ export const menu: MenuItem[] = [
     price: "₹280",
     note: "Single-origin espresso, pulled to order.",
     gradient: "linear-gradient(160deg, #3A2A1E, #1A1210)",
+    image:
+      "https://images.pexels.com/photos/9050518/pexels-photo-9050518.jpeg?auto=compress&cs=tinysrgb&w=900",
   },
   {
     name: "Cold Coffee",
     price: "₹320",
     note: "Slow-steeped 18 hours over ice.",
     gradient: "linear-gradient(160deg, #4A3624, #241812)",
+    image:
+      "https://images.pexels.com/photos/11100423/pexels-photo-11100423.jpeg?auto=compress&cs=tinysrgb&w=900",
   },
   {
     name: "Desserts",
     price: "₹240",
     note: "Rotating patisserie, made in-house daily.",
     gradient: "linear-gradient(160deg, #5B4029, #2A1C12)",
+    image:
+      "https://images.pexels.com/photos/31101247/pexels-photo-31101247.jpeg?auto=compress&cs=tinysrgb&w=900",
   },
   {
     name: "Seasonal Special",
     price: "₹360",
     note: "This month: cardamom honey latte.",
     gradient: "linear-gradient(160deg, #6B4A2E, #33221548)",
+    image:
+      "https://images.pexels.com/photos/544113/pexels-photo-544113.jpeg?auto=compress&cs=tinysrgb&w=900",
   },
 ];
 
@@ -145,12 +168,52 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const galleryTiles = [
-  { span: "row-span-2", gradient: "linear-gradient(150deg,#3A2A1E,#120C08)" },
-  { span: "", gradient: "linear-gradient(150deg,#5B4029,#241812)" },
-  { span: "", gradient: "linear-gradient(150deg,#4A3320,#1A120C)" },
-  { span: "row-span-2", gradient: "linear-gradient(150deg,#6B4A2E,#2A1C12)" },
-  { span: "", gradient: "linear-gradient(150deg,#3E2C1E,#140E0A)" },
-  { span: "", gradient: "linear-gradient(150deg,#7A5636,#33241548)" },
-  { span: "", gradient: "linear-gradient(150deg,#4A3624,#1A120C)" },
-  { span: "", gradient: "linear-gradient(150deg,#5B4227,#241812)" },
+  {
+    span: "row-span-2",
+    gradient: "linear-gradient(150deg,#3A2A1E,#120C08)",
+    image:
+      "https://images.pexels.com/photos/8485870/pexels-photo-8485870.jpeg?auto=compress&cs=tinysrgb&w=900",
+  },
+  {
+    span: "",
+    gradient: "linear-gradient(150deg,#5B4029,#241812)",
+    image:
+      "https://images.pexels.com/photos/1005058/pexels-photo-1005058.jpeg?auto=compress&cs=tinysrgb&w=900",
+  },
+  {
+    span: "",
+    gradient: "linear-gradient(150deg,#4A3320,#1A120C)",
+    image:
+      "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=900",
+  },
+  {
+    span: "row-span-2",
+    gradient: "linear-gradient(150deg,#6B4A2E,#2A1C12)",
+    image:
+      "https://images.pexels.com/photos/29795731/pexels-photo-29795731.jpeg?auto=compress&cs=tinysrgb&w=900",
+  },
+  {
+    span: "",
+    gradient: "linear-gradient(150deg,#3E2C1E,#140E0A)",
+    image:
+      "https://images.pexels.com/photos/12567406/pexels-photo-12567406.jpeg?auto=compress&cs=tinysrgb&w=900",
+  },
+  {
+    span: "",
+    gradient: "linear-gradient(150deg,#7A5636,#33241548)",
+    image:
+      "https://images.pexels.com/photos/8847017/pexels-photo-8847017.jpeg?auto=compress&cs=tinysrgb&w=900",
+  },
+  {
+    span: "",
+    gradient: "linear-gradient(150deg,#4A3624,#1A120C)",
+    image:
+      "https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg?auto=compress&cs=tinysrgb&w=900",
+  },
+  {
+    span: "",
+    gradient: "linear-gradient(150deg,#5B4227,#241812)",
+    image:
+      "https://images.pexels.com/photos/6612674/pexels-photo-6612674.jpeg?auto=compress&cs=tinysrgb&w=900",
+  },
 ];

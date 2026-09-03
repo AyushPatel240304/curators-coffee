@@ -43,7 +43,7 @@ export function Nav() {
           ))}
         </ul>
         <a
-          href="#visit"
+          href="#reserve"
           className="rounded-full border border-copper/60 px-5 py-2 font-body text-sm text-copperlt transition-all duration-300 ease-glide hover:border-copper hover:bg-copper hover:text-ink"
         >
           Reserve
